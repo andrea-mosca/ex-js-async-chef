@@ -11,6 +11,7 @@ async function getChefBirthday(id) {
   } catch (err) {
     throw new Error(`impossibile raggiungere la ricetta con id: ${id}`);
   }
+  // bonus 1
   if (ricetta.message) {
     throw new Error(ricetta.message);
   }
