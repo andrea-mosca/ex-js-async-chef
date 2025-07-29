@@ -29,10 +29,11 @@ async function getChefBirthday(id) {
   return user.birthDate;
 }
 
-try {
-  getChefBirthday(1).then((res) =>
-    console.log("Data di nascita dello chef:", res)
-  );
-} catch (err) {
-  console.error(err);
-}
+(async () => {
+  try {
+    const res = await getChefBirthday(1);
+    console.log("Data di nascita dello chef:", res);
+  } catch (err) {
+    console.error(err);
+  }
+})();
